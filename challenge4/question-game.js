@@ -11,6 +11,7 @@ var Question  = function(ques, correctans){
         if(parseInt(answer) === tempoQuest.correctAnswer){
             alert('Correcta, Pasa a la siguiente pregunta -> ');
             console.log('Respuesta [ ' + parseInt(answer) + ' ] es correcta');
+            score += 1;
             makeRandomQuestion();
         }
         else{
@@ -20,6 +21,7 @@ var Question  = function(ques, correctans){
         }
     };
 };
+var score = 0;
 var question1 = new Question('¿De qué color es el caballo blanco de Santiago?: ',2);
 question1.answers('[1]. Negro.','[2]. Blanco.','[3]. No sé.');
 var question2 = new Question('Si un gallo pone un huevo en lo alto de una torre, ¿hacia dónde cae el huevo?: ',3);
@@ -66,7 +68,8 @@ function respuesta(tempQ){
     var getAnswer = prompt(tempQ.question + '\n' + '\n' + tempQ.answerSchoose);
     console.log('Repuesta escogida: ' + getAnswer);
     if(getAnswer === 'exit'){
-        alert('Juego acabado :) !');
+        alert('Juego acabado con puntuacion final --> [ ' + score + ' ] =)!!');
+        console.log('Puntuación final --> ' + score);
     }
     else{
         tempQ.checkAnswer(getAnswer,tempQ);
