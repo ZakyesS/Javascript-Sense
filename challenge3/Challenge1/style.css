@@ -68,6 +68,16 @@ body {
     color: #EB4D4D;
     margin-bottom: 130px;
 }
+.text-score {
+    text-align: top-left;
+    font-size: 20px;
+    font-weight: auto;
+    color: black;
+    margin-bottom: 15px;
+    padding-left: 4em;
+    padding-top: 1em;
+}
+
 
 .active { background-color: #f7f7f7; }
 .active .player-name { font-weight: 300; }
@@ -137,6 +147,7 @@ i {
 .btn-new { top: 25px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
+.btn-ok { left: 205px; top: 75px;}
 
 
 .dice {
